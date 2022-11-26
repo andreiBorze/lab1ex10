@@ -12,11 +12,20 @@ namespace lab1ex10
             Console.WriteLine("Acest program va calcula suam cifrelor unui numar intreg. \n");
 
             Console.WriteLine("Introduceti un numar intreg de 2 cifre:");
-            var nr = int.Parse(Console.ReadLine());
+            var nrString = Console.ReadLine();
 
-            var sum = nr / 10 + nr%10;
+            if(nrString.Length == 2)
+            {
+                var nr = int.Parse(nrString);
+                var sum = nr / 10 + nr % 10;
+                Console.WriteLine("Suma cifrelor este: " + sum);
+            }
+            else
+            {
+                Console.WriteLine("Numarul introdus are mai mult de 2 cifre!");
+            }
 
-            Console.WriteLine("Suma cifrelor este: " + sum);
+            
         }
     }
 }
